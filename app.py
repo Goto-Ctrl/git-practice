@@ -43,6 +43,8 @@ if uploaded_image is not None:
             st.line_chart(
                 calculate_channel_histograms(rgb_image),
                 color=["#FF0000", "#00AA00", "#0000FF"],
+                x_label="画素値",
+                y_label="画素数",
             )
             st.image(rgb_image, caption=uploaded_image.name)
     except (UnidentifiedImageError, OSError):
